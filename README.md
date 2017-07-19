@@ -1,22 +1,22 @@
-# FYH 的个人简历
+# MJY 的个人简历
 
 
 
 ## 个人信息
 
-杭州 | 1990年生 | 前端工程师 | 学历
+绍兴 | 1994年生 | 前端工程师 | 本科
 
-手机：13812345678
+手机：15723016991
 
-QQ：1234567
+QQ：1297606787
 
-GitHub：github.com/frankfang
+GitHub：https://github.com/MAJIANYANG666
 
 
 
 ## 项目经历
 
-1. 火影忍者人设页面（最简单页面）
+1. fate/zero人设页面（最简单页面）
 
    ​	使用媒体查询、Flex 布局制作的响应式页面。
 
@@ -30,7 +30,7 @@ GitHub：github.com/frankfang
 
 4. 英雄联盟官网仿制
 
-   ​	使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原[英雄联盟官网](https://github.com/frankfang)。
+   ​	使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原[英雄联盟官网](https://majianyang666.github.io/git-demo3/pro32-1-lol-index/index.html)。
 
 5. 自制 DOM 库、BOM 库、jQuery 库
 
@@ -38,7 +38,7 @@ GitHub：github.com/frankfang
 
 ## 工作经历
 
-有就写，没有就不写
+没有
 
 
 
@@ -59,8 +59,8 @@ GitHub：github.com/frankfang
 
 ## 更多链接
 
-- [我的博客](https://frankfang.com)
-- [我的 GitHub](https://github.com/frankfang)
+- [我的博客](http://www.jianshu.com/u/ecda0d3623a1)
+- [我的 GitHub](https://github.com/MAJIANYANG666)
 - [我翻译的文章](#)
 - [我的 Demos](#)
 
