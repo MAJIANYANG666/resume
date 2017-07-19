@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FYH 的个人简历</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style>
+    *{margin:0;padding:0;box-sizing: border-box;}
+    ul,ol{list-style: none;} 
+    svg.icon{width:1em; height:1em;}
+    
+    .toplinks{
+      color: white;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .toplinks::after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      border-width: 14px 10px;
+      top: 100%;
+      border-style: solid;
+      border-color: rgb(247,97,96);
+      border-bottom: none;
+      border-left-color: transparent;
+      border-right-color:transparent;
+    }
+    .toplinks svg{
+      fill: white;
+      width: 1em;
+      height: 1em;
+      margin-right: 1.5em;
+    }
+    .toplinks > ul {
+      display: flex;
+      padding: 15px 0;
+    }
+    .toplinks-wrapper{
+      background: rgb(247,97,96);
+    }
+    
+    body > nav{
+      background: rgb(55,71,96); color: white;
+    } 
+    body > nav > ul {
+      display: flex;
+      justify-content: center;
+      
+    }
+    body > nav > ul > li {
+      padding: 50px 20px;
+    }
+    section.profile{
+      background: transparent url(//i.loli.net/2017/07/18/596d7bd5ae67b.jpg) no-repeat center;
+      background-size: cover;
+      height: 520px;
+      position: relative;
+      padding-top: 80px;
+    }
+    section.profile::after{
+      
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(55,71,96,0.8);
+    }
+    .profile-content{
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+    }
+    section.profile h1{
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+    section.profile .icon{
+      fill:rgb(247,97,96);
+    }
+    section.profile .icon-location{
+      fill: white;
+      width: 0.6em; height: 0.6em;
+      position: relative;
+      top: -2px;
+    }
+    section.profile .city{
+      background: rgb(247,97,96);
+      padding: 3px 8px;
+      border-radius: 8px;
+      margin-left: 25px;
+    }
+    section.projects{}
+    section.experience{}
+    section.skills{}
+    
+    section.bestProjects{
+      margin-top: -200px;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="toplinks-wrapper">
+    <div class="toplinks">
+      <ul>
+        <li>
+          <a href="https://frankfang.com" title="我的博客">
+            <svg>
+              <use xlink:href="#icon-star"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/frankfang" title="GitHub">
+            <svg>
+              <use xlink:href="#icon-star"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="我翻译的文章">
+            <svg>
+              <use xlink:href="#icon-star"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="我的 Demos">
+            <svg>
+              <use xlink:href="#icon-star"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li>关于我</li>
+      <li>项目介绍</li>
+      <li>工作经历</li>
+      <li>技能</li>
+      <li>学历</li>
+    </ul>
+  </nav>
+
+  <section class="profile">
+    <div class="profile-content">
+      <h1>方方</h1>
+      <p><span class="jobTitle">
+        <svg class="icon">
+          <use xlink:href="#icon-star"></use>
+        </svg>
+        前端工程师</span> <span class="city">
+          <svg class="icon icon-location">
+            <use xlink:href="#icon-star"></use>
+          </svg>
+        杭州</span> </p>
+    </div>
+
+  </section>
+  <style>
+    a{
+      text-decoration: none;
+    }
+    .bestProjects{
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex; 
+      justify-content: space-between;
+      color: #333;
+    }
+    .bestProjects > .card{
+      width: 380px;
+      box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    }
+    .bestProjects > .card img{
+      max-width: 100%;
+      vertical-align: top;
+    }
+    .bestProjects > .card > .title{
+      background: rgb(237,244,252);
+      padding: 10px;
+      text-align: center;
+    }
+    .redButton{
+      color: white;
+      background: rgb(247,97,96);
+      padding: 6px 18px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .bestProjects .links{
+      border: 5px solid rgb(237,244,252);
+      padding: 5px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+  <section class="bestProjects">
+    <div class="card">
+      <img src="https://i.loli.net/2017/07/18/596d815dda19b.png" alt="">
+      <div class="title">
+        <h3>项目名称</h3>
+      </div>
+      
+      <div class="links">
+        <a href="#" class=redButton>预览</a>
+        <a href="#">源代码</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.loli.net/2017/07/18/596d815dda19b.png" alt="">
+      <div class="title">
+        <h3>项目名称</h3>
+      </div>
+      <div class="links">
+        <a href="#" class="redButton">预览</a>
+        <a href="#">源代码</a>
+      </div>
+    </div>
+  </section>
+  <section class="projects">
+    <ol>
+      <li>
+        <h2>火影忍者人设页面（最简单页面）</h2>
+        <p>使用媒体查询、Flex 布局制作的响应式页面。</p>
+      </li>
+      <li>
+        <h2>一个苹果风格的轮播组件（轮播）</h2>
+        <p>使用 jQuery 制作的苹果风格轮播</p>
+      </li>
+      <li>
+        <h2>一个手机画板（Canvas 画图）</h2>
+        <p>使用原生 JS，借助 Canvas API 和动态 REM 方案（flexible.js）制作的手机画板</p>
+      </li>
+      <li>
+        <h2>英雄联盟官网仿制</h2>
+        <p>使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原英雄联盟官网。</p>
+      </li>
+      <li>
+        <h2>自制 DOM 库、BOM 库、jQuery 库</h2>
+        <p>放链接</p>
+      </li>
+    </ol>
+  </section>
+  <section class="experience">
+    <ol>
+      <li>
+        <h2>A 公司</h2>
+        <p>我的职责是……</p>
+      </li>
+      <li>
+        <h2>B 公司</h2>
+        <p>我的职责是……</p>
+      </li>
+    </ol>
+  </section>
+  <section class="skills">
+    <h2>我的技能</h2>
+    <ul>
+      <li>
+        静态页面制作技术
+        <ul>
+          <li>像素级还原设计稿，可以实现响应式以适应手机屏幕。</li>
+          <li>CSS 3 动画、Flex 布局、CSS</li>
+        </ul>
+      </li>
+      <li>
+        移动端页面
+        <ul>
+          <li>使用动态 REM 适配所有手机屏幕</li>
+          <li>手机端页面调试</li>
+        </ul>
+      </li>
+      <li>
+        熟练使用 jQuery
+        <ul>
+          <li>了解 jQuery 常见 API </li>
+          <li>编写 jQuery 插件</li>
+        </ul>
+      </li>
+      <li>
+        与后端配合开发
+        <ul>
+          <li>
+            了解 HTTP 协议，知道 HTTP 请求、响应的定义
+          </li>
+          <li>AJAX（待教）</li>
+        </ul>
+      </li>
+    </ul>
+    </sections>
+
+    <section class="indroducation">
+      <h2>自我描述</h2>
+      <p>性格、对前端的兴趣、如何自学前端、学习经历</p>
+    </section>
+
+    <script src="//at.alicdn.com/t/font_5k1wbxxcc2kb7qfr.js"></script>
+</body>
+
+</html>
