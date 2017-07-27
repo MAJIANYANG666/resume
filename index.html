@@ -9,6 +9,7 @@
         *{margin: 0;padding: 0;box-sizing:border-box;}
         a{text-decoration:none;}
         img{vertical-align: top;}
+        h1,h2,h3,h4,h5,h6{font-weight: normal;}
         svg{height: 1em;width: 1em;}
         ul,ol{list-style:none;}
         .links-wrapper{background: #F76160;}
@@ -16,9 +17,9 @@
         .links svg{fill:white;height: 1em;width: 1em;margin-right: 1.5em;}
         .links ul{display: flex;}
         .links::after{content:'';display: block;position:absolute;top:100%;left: 50%;border:10px solid transparent;border-top-color:#F76160;transform:translateX(-50%);}
-        nav {background: #374760;color: #fff;}
-        nav ul{display: flex;justify-content:center;}
-        nav ul>li{padding: 50px 20px;}
+        .globalNavigation {background: #374760;color: #fff;}
+        .globalNavigation ul{display: flex;justify-content:center;}
+        .globalNavigation ul>li{padding: 50px 20px;}
         section.profile{
             background: url("https://i.loli.net/2017/07/24/59759b3069848.jpg" )no-repeat center center;
             background-size:cover;
@@ -54,11 +55,115 @@
             padding:0.5em 2em;border-radius:5px;
             margin-top:20px;
             margin-bottom:20px;}
-        .profile-content{}
+        .tabs{
+            max-width:800px;
+            margin: 34px auto 0;
+            border:4px solid #EDF4FC;
+        }
+        .tabs ol{  display: flex;}
+        .tabs ol li{
+            flex-grow:1;
+
+            padding:8px 0;
+            display: flex;
+            align-items: center;
+            justify-content:center;}
+        .tabs ol li svg{
+            margin-right:.5em;}
+        .tabs ol li.active{
+            background: #EDF4FC;
+            position: relative;}
+        .tabs ol li.active::after{
+            content: '';
+            width:0px;
+            height:0px;
+            border:10px solid transparent;
+            border-top-color:#EDF4FC;
+            display: block;
+            position: absolute;
+            top:100%;
+            left:50%;
+            margin-left:-10px;
+            margin-top:4px;
+        }
+        .tabs-content>section{  display: none;
+            min-height:500px;max-width:800px;
+            margin:0 auto;
+            padding-top:10px;}
+        .tabs-content>section.active{  display: block;}
+        .tabs-content ol{  display: flex;flex-wrap: wrap;
+            justify-content: space-between;
+            margin:16px 0;}
+        .tabs-content ol>li{  width:30%;
+            margin-top:16px;
+            margin-bottom:16px;}
+        .tabs-content ol>li img{max-width:100%;}
+        .tabs-content .image-wrapper{
+            position: relative;
+            display: block;}
+        .tabs-content .image-wrapper p{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: rgba(255,255,255,0.5);
+            padding:16px;
+            color: #333;
+            display: none;}
+        .tabs-content .image-wrapper:hover p{  display: block;}
+        .tabs-content ol>li>h2{font-size: 14px;font-weight: normal;
+            margin-top:4px;}
+
         section.projects{}
         section.experience{}
         section.skills{}
-        section.introducation{}
+        section.skills>h2{text-align: center;
+            margin-top:32px;
+            margin-bottom:16px;}
+        section.skills ul{
+            max-width:400px;
+            margin:0 auto;
+            position: relative;
+            left:50px;
+            }
+        section.skills ul li{
+            position: relative;
+            }
+        section.skills ul li::before{
+            content:"";
+            position: absolute;
+            right:100%;
+            top:0;
+            display: block;
+            width:40px;
+            height:40px;
+            background: red;
+        border-radius:50%;
+            border:3px solid #aabbab;
+            margin-right:20px;
+            background: white url(//i.loli.net/2017/07/27/5979b8580ff12.png) no-repeat center center;
+            background-size:cover;}
+        section.skills ul li::after{
+            content:"";
+            display: block;
+            position: absolute;
+            width:0;
+            height:100%;
+            top:11px;
+
+            border-left:1px solid #aabbab;
+            left:-44px;
+            z-index:-1;
+        }
+        section.skills ul li:last-child::after{
+            display: none;}
+        section.skills ul li>h2{
+            margin-bottom:8px;
+            margin-top:12px;}
+        section.skills ul li>p{
+            color: #999;}
+        section.introduction{}
     </style>
 </head>
 
@@ -99,7 +204,7 @@
         </ul>
     </div>
 </div>
-<nav>
+<nav class="globalNavigation">
     <ul>
         <li>关于我</li>
         <li>项目经历</li>
@@ -146,67 +251,125 @@
     </div>
 </section>
 
-
-<section class="projects">
-    <h2>项目经历</h2>
+<nav class="tabs">
     <ol>
-        <li>
-            <h2>火影忍者人设页面（最简单页面）</h2>
-            <p>使用媒体查询、Flex 布局制作的响应式页面。</p>
+        <li class="active">
+            <svg>
+                <use xlink:href="#icon-star"></use>
+            </svg>
+            项目经历
         </li>
         <li>
-            <h2>一个苹果风格的轮播组件（轮播）</h2>
-            <p>使用 jQuery 制作的苹果风格轮播</p>
+            <svg>
+                <use xlink:href="#icon-star"></use>
+            </svg>
+            工作经验
         </li>
         <li>
-            <h2>一个手机画板（Canvas 画图）</h2>
-            <p>使用原生 JS，借助 Canvas API 和动态 REM 方案（flexible.js）制作的手机画板</p>
+            <svg>
+                <use xlink:href="#icon-star"></use>
+            </svg>
+            技能
         </li>
         <li>
-            <h2>英雄联盟官网仿制</h2>
-            <p>使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原英雄联盟官网。</p>
-        </li>
-        <li>
-            <h2>自制 DOM 库、BOM 库、jQuery 库</h2>
-            <p>放链接</p>
+            <svg>
+                <use xlink:href="#icon-star"></use>
+            </svg>
+            自我描述
         </li>
     </ol>
-</section>
-<section class="experience">
-    <h2>工作经历</h2>
-    <p>无</p>
-</section>
-<section class="skills">
-    <h2>我的技能</h2>
-    <ul>
-        <li>
-            <h2>静态页面制作技术</h2>
-            <p>像素级还原设计稿，可以实现响应式以适应手机屏幕</p>
-            <p>CSS 3 动画、Flex 布局、CSS 2 布局</p>
-        </li>
-        <li>
-            <h2>移动端页面</h2>
-            <p>使用动态 REM 适配所有手机屏幕</p>
-            <p>手机端页面调试</p>
-        </li>
-        <li>
-            <h2>熟练使用 jQuery</h2>
-            <p>了解 jQuery 常见 API </p>
-            <p>编写 jQuery 插件</p>
-        </li>
-        <li>
-            <h2>与后端配合开发</h2>
-            <p>了解 HTTP 协议，知道 HTTP 请求、响应的定义</p>
-            <p>AJAX（待教）</p>
-        </li>
-    </ul>
-</section>
+</nav>
+<div class="tabs-content">
+    <section class="projects active">
+        <ol>
+            <li>
+                <a class="image-wrapper" href="#">
+                    <img src="//ooo.0o0.ooo/2017/07/27/59799fb10cb89.png" alt="">
+                    <p>使用媒体查询、Flex 布局制作的响应式页面。</p>
+                </a>
+                <h2>火影忍者人设页面（最简单页面）</h2>
 
-<section class="introducation">
-    <h2>自我描述</h2>
-    <p>性格、对前端的兴趣、如何自学前端、学习经历</p>
-</section>
+            </li>
+            <li>
+                <a class="image-wrapper" href="#">
+                    <img src="//ooo.0o0.ooo/2017/07/27/59799fb10cb89.png" alt="">
+                    <p>使用 jQuery 制作的苹果风格轮播</p>
+                </a>
+                <h2>一个苹果风格的轮播组件（轮播）</h2>
+
+            </li>
+            <li>
+                <a class="image-wrapper" href="#">
+                    <img src="//ooo.0o0.ooo/2017/07/27/59799fb10cb89.png" alt="">
+                    <p>使用原生 JS，借助 Canvas API 和动态 REM 方案（flexible.js）制作的手机画板</p>
+                </a>
+                <h2>一个手机画板（Canvas 画图）</h2>
+
+            </li>
+            <li>
+                <a class="image-wrapper" herf="#">
+                    <img src="//ooo.0o0.ooo/2017/07/27/59799fb10cb89.png" alt="">
+                    <p>使用 jQuery、Slides.js、自制的 Tab 组件，像素级精确还原英雄联盟官网。</p>
+                </a>
+                <h2>英雄联盟官网仿制</h2>
+
+            </li>
+            <li>
+                <a class="image-wrapper" href="#">
+                    <img src="//ooo.0o0.ooo/2017/07/27/59799fb10cb89.png" alt="">
+                    <p>放链接</p>
+                </a>
+                <h2>自制 DOM 库、BOM 库、jQuery 库</h2>
+
+            </li>
+        </ol>
+    </section>
+    <section class="experience">
+        <h2>工作经历</h2>
+        <p>无</p>
+    </section>
+    <section class="skills">
+        <h2>我的技能</h2>
+        <ul>
+            <li>
+                <h2>静态页面制作技术</h2>
+                <p>像素级还原设计稿，可以实现响应式以适应手机屏幕</p>
+                <p>CSS 3 动画、Flex 布局、CSS 2 布局</p>
+            </li>
+            <li>
+                <h2>移动端页面</h2>
+                <p>使用动态 REM 适配所有手机屏幕</p>
+                <p>手机端页面调试</p>
+            </li>
+            <li>
+                <h2>熟练使用 jQuery</h2>
+                <p>了解 jQuery 常见 API </p>
+                <p>编写 jQuery 插件</p>
+            </li>
+            <li>
+                <h2>与后端配合开发</h2>
+                <p>了解 HTTP 协议，知道 HTTP 请求、响应的定义</p>
+                <p>AJAX（待教）</p>
+            </li>
+        </ul>
+    </section>
+    <section class="introduction">
+        <h2>自我描述</h2>
+        <p>性格、对前端的兴趣、如何自学前端、学习经历</p>
+    </section>
+</div>
+
+
 <script src="//at.alicdn.com/t/font_vjmpgx77sa4w8kt9.js"></script>
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(".tabs").on("mouseenter","li",function(e){
+        let $li=$(e.currentTarget)
+        let index=$li.index()
+        $li.addClass("active").siblings('.active').removeClass("active")
+        $(".tabs-content>section").eq(index).addClass('active').siblings('.active').removeClass("active")
+    })
+</script>
 </body>
 
 </html>
